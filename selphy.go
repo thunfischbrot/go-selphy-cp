@@ -500,7 +500,6 @@ func main() {
 func checkError(err error) {
 	if err != nil {
 		_, file, line, _ := runtime.Caller(1)
-		fmt.Fprintln(os.Stderr, "Fatal error at ", file, "line", line, err.Error())
-		os.Exit(1)
+		fmt.Fprintln(os.Stderr, "Error at ", file, "line", line, err.Error())
 	}
 }
